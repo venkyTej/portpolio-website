@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portpolio</title>
+    <script src="https://kit.fontawesome.com/4b254625f8.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(290deg, #2f3438, #955d85);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: linear-gradient(290deg, #2f3438, #7b5871);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border-bottom: 1px solid #110d0d;
+            text-decoration: none;
+
+        }
+
+        header a {
+            text-decoration: none;
+            color: #17131e;
+            margin: 0 15px;
+            font-size: large;
+            border-radius: 25px;
+            height: 20px;
+            width: 20px;
+            position: relative;
+
+
+        }
+
+        header a:active {
+            color: #b6b6be;
+            cursor: pointer;
+            background-color: rgb(13, 8, 12);
+            position: relative;
+
+        }
+
+        header .hire-me {
+            background-color: #8c89bd;
+            border: 3px solid rgb(40, 38, 39);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: #e3dcdc;
+        }
+
+        .hero h2 {
+            color: #090d18;
+            margin: 10px 0;
+        }
+
+        .hero p {
+            color: #aaa3a6;
+            margin: 20px 0;
+        }
+
+        .hero .download-cv {
+            background: linear-gradient(290deg, #2f3438, #7b5871);
+            color: #0e0c0c;
+            padding: 10px 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid rgb(171, 150, 211);
+
+        }
+
+        .download-cv:active {
+            color: rgb(91, 15, 224);
+            pointer-events: visibleFill;
+            cursor: pointer;
+            background: linear-gradient(290deg, #2f3438, #7b5871);
+            box-shadow: 5px 5px 5px rgb(175, 79, 124);
+
+
+
+        }
+
+
+
+        .biography {
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 800px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .biography h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .biography p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .venky {
+            width: 150px;
+            border-radius: 50%;
+            margin: 20px 0;
+
+
+        }
+
+        .icons {
+            font-size: xx-large;
+            color: rgb(185, 125, 132);
+
+        }
+
+        button {
+            height: 40px;
+            width: 80px;
+            border-radius: 10px;
+            background-color: #7c08ca;
+            color: #e7dede;
+            font-size: large;
+
+        }
+
+        button:active {
+            color: #a00e0e;
+            cursor: pointer;
+        }
+
+        .name {
+            color: white;
+        }
+
+        .navbar {
+            font-size: x-large;
+        }
+
+        .inner {
+            padding-top: 20px;
+
+        }
+
+        .headers {
+            text-align: center;
+            color: #edf0ec;
+            padding: 0.1px;
+            position: relative;
+            cursor: pointer;
+            margin: 10px auto;
+
+
+
+        }
+
+        .headers::after {
+            content: '';
+
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            transition: 0.3s;
+            transition-timing-function: ease-in-out;
+            transform: scaleX(0);
+            height: 3px;
+            width: 140px;
+            background-color: #0e0117;
+
+        }
+        .headers:hover:after {
+            transform: scaleX(1);
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            grid-gap: 1rem;
+            padding: 1rem 80px;
+            font-size: 1.2rem;
+
+
+
+        }
+
+        .skill-box {
+            padding: 1rem;
+            color: #ddd;
+            cursor: pointer;
+        }
+        .skill-box:after {
+            content: '';
+
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            transition: 0.3s;
+            transition-timing-function: ease-in-out;
+            transform: scaleX(0);
+            height: 0px;
+            width: 130px;
+            background-color: #0e0117;
+
+        }
+        .skill-box:hover::after{
+            transform: scale(1);
+
+
+        }
+
+        
+        
+        
+
+        
+
+        .skill-title {
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+
+
+
+        }
+
+        .skill-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 35%;
+            width: 130px;
+            height: 0px;
+            border-radius: 2px 0 0 2px;
+            background-color: #0e0117;
+            transition: 0.3s;
+            transition-timing-function: ease-in-out;
+        }
+            
+            
+            
+
+
+        
+        .skill-title:hover::after{
+            transform: scale(1);
+
+
+        }
+
+
+
+        span {
+            color: #f5bf0d
+        }
+
+        img {
+            width: 200px;
+            height: 150px;
+            position: relative;
+            border-radius: 20px;
+
+            background-color: #fff;
+            display: inline-flex;
+
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .skill-icon{
+            width: 50px;
+        }
+
+        img:after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 200px;
+            right: 100px;
+            border-radius: 15px;
+            width: 50px;
+            height: 150px;
+            background-color:none;
+          
+
+        }
+
+
+
+        .skill-title h3 {
+            color: #e59a0f;
+            margin: 0.5em;
+
+        }
+
+        .skill-icon {
+            width: 100px;
+
+        }
+             
+.portfolio {
+    padding: 50px 20px;
+}
+
+.portfolio h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 650px;
+    color: white;
+    
+}
+
+
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.project {
+    background: #f6f3e7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5 6px 8px rgba(20, 24, 21, 0.2);
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+}
+
+.project p {
+    font-size: 1em;
+    color: #100c0c;
+    margin-bottom: 15px;
+}
+
+.project a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(232, 225, 233);
+    background-color: #06010e;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition:  0.3s;
+}
+
+.project a:hover {
+    background-color: #0056b3;
+    transition: 2s;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <h2><i>Venky</i></h2>
+        </div>
+        <nav class="navbar">
+            <a href="portpolio.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Portpolio</a>
+            <a href="#">projects</a>
+            <a href="#">contact</a>
+        </nav>
+        <nav>
+            <button>Hire me</button>
+        </nav>
+
+
+    </header>
+
+
+    <section class="hero">
+        <div class="profile">
+            <img class="venky" src="/static/images/venky1.jpg">
+        </div class="name">
+        <h1>Hello, I am</h1>
+        <h2>Venky</h2>
+        <h3>Full-stack Developer</h3>
+        <p>Im a fresher ,Im a capable for the role of frontend Developer and backend developer</p>
+        <a href="resume.html" class="download-cv">Download CV</a>
+
+
+        </div>
+    </section>
+    <div class="inner">
+        <div class="headers">
+            <h1>my<span> skills</span></h1>
+
+        </div>
+        <div class="container">
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="static/images/html - Copy.jpg" class="skill-icon">
+                    </div>
+                    <h3>html 5</h3>
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur ut rerum.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="/static/images/css.jpg" class="skill-icon">
+                    </div>
+                    <h3>css 3</h3>
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur ut rerum.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="/static/images/java.webp" class="skill-icon">
+                    </div>
+                    <h3>java</h3>
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur ut rerum.</p>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="static/images/python.webp" class="skill-icon">
+                    </div>
+                    <h3>python</h3>
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur ut rerum.</p>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="static/images/js.jpg" class="skill-icon">
+                    </div>
+                    <h3>javascript</h3>
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur ut rerum.</p>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="static/images/saas.png" class="skill-icon">
+                    </div>
+                    <h3>cloud computing</h3>
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur ut rerum.</p>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="/static/images/css.jpg" class="skill-icon">
+                    </div>
+                    <h3>css 3</h3>
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur ut rerum.</p>
+            </div>
+
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="static/images/my sql.jpg" class="skill-icon">
+                    </div>
+                    <h3>my sql</h3>
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur ut rerum.</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="static/images/as.jpg" class="skill-icon">
+                    </div>
+                    <h3>Angular JS</h3>
+
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda pariatur ut rerum.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+    <section class="portfolio">
+        <h2>My<span>projects</span> </h2>
+        <div class="projects-container">
+            
+            <div class="project">
+                <img src="/static/images/flipkart.jpg" alt="Project 1">
+                <h3>Project One</h3>
+                <p>A brief description of the project goes here.</p>
+                <a href="https://github.com/yourusername/project1" target="_blank">View Code</a>
+            </div>
+
+            <div class="project">
+                <img src="/static/images/amazon.png" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>Another cool project description.</p>
+                <a href="https://your-live-demo.com" target="_blank">Live Demo</a>
+            </div>
+
+            <div class="project">
+                <img src="/static/images/food delivery.jpg" alt="Project 3">
+                <h3>Project Three</h3>
+                <p>This is a unique project description.</p>
+                <a href="https://github.com/yourusername/project3" target="_blank">View Code</a>
+            </div>
+            
+
+
+        </div>
+    </section>
+
+       
+    
+
+
+
+
+
+</body>
+
+</html>
